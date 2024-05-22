@@ -4,10 +4,10 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "rules_buf",
-    integrity = "sha256-6HnTLa70McqeLBVjqrfK+m/zCQ45tt9hYR/NsniWYWs=",
-    strip_prefix = "rules_buf-096c5e37cc4f4ecaa773cc2264c9bb72187c7995",
+    integrity = "sha256-Hr64Q/CaYr0E3ptAjEOgdZd1yc+cBjp7OG1wzuf3DIs=",
+    strip_prefix = "rules_buf-0.3.0",
     urls = [
-        "https://github.com/bufbuild/rules_buf/archive/096c5e37cc4f4ecaa773cc2264c9bb72187c7995.zip",
+        "https://github.com/bufbuild/rules_buf/archive/refs/tags/v0.3.0.zip",
     ],
 )
 
