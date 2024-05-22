@@ -4,10 +4,10 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "rules_buf",
-    sha256 = "523a4e06f0746661e092d083757263a249fedca535bd6dd819a8c50de074731a",
-    strip_prefix = "rules_buf-0.1.1",
+    integrity = "sha256-6HnTLa70McqeLBVjqrfK+m/zCQ45tt9hYR/NsniWYWs=",
+    strip_prefix = "rules_buf-096c5e37cc4f4ecaa773cc2264c9bb72187c7995",
     urls = [
-        "https://github.com/bufbuild/rules_buf/archive/refs/tags/v0.1.1.zip",
+        "https://github.com/bufbuild/rules_buf/archive/096c5e37cc4f4ecaa773cc2264c9bb72187c7995.zip",
     ],
 )
 
@@ -15,7 +15,7 @@ load("@rules_buf//buf:repositories.bzl", "rules_buf_dependencies", "rules_buf_to
 
 rules_buf_dependencies()
 
-rules_buf_toolchains(version = "v1.28.0")
+rules_buf_toolchains(version = "v1.32.1")
 
 load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
 
