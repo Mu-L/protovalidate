@@ -16,21 +16,6 @@ syntax = "proto3";
 
 import "buf/validate/validate.proto";
 
-service FeedbackService {
-  rpc SubmitFeedback(SubmitFeedbackRequest) returns (SubmitFeedbackResponse);
+message TestMessage {
+  bool test_field = 1 [(buf.validate.field).bool.const = true];
 }
-
-message SubmitFeedbackRequest {
-  // feedback is the content of feedback to submit.
-  string feedback = 1;
-  // email is the email.
-  string email = 2 [
-    // `IGNORE_IF_UNPOPULATED` skips validation on a field if it's unpopulated.
-    // The email will be not validated if it's the empty string.
-    (buf.validate.field).ignore = IGNORE_IF_UNPOPULATED,
-    // `string.email` validates that a string field is a valid email.
-    (buf.validate.field).string.email = true
-  ];
-}
-
-message SubmitFeedbackResponse {}
